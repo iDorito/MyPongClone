@@ -74,8 +74,8 @@
     <IncludePath>$(SolutionDir)dependencies\SFML\include;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(SolutionDir)dependencies\SFML\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)dependencies\SFML\lib;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\bin</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\intermediate</IntDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\intermediate\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -147,7 +147,19 @@ ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Ball.cpp" />
+    <ClCompile Include="src\Gmath.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Text.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Ball.h" />
+    <ClInclude Include="src\Gmath.h" />
+    <ClInclude Include="src\Enemy.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
